@@ -2,6 +2,7 @@
 
 ## Video reference for this lecture is the following:
 
+[![Watch the video](https://img.youtube.com/vi/qyYsLVZDieU/maxresdefault.jpg)](https://www.youtube.com/watch?v=qyYsLVZDieU)
 
 ---
 ## ⭐ Support the Project  
@@ -71,6 +72,8 @@ To follow the DevSecOps and SonarQube flow end-to-end, these three sessions will
 
 ## What is DevSecOps and why it is important
 
+![Alt text](/Lectures/images/s1.png)
+
 ### Why DevSecOps
 
 * **Late security checks create failures at release time.** Traditional models rely on a penetration test or manual review near go-live, which triggers last-minute defects, costly rework, and friction between security and engineering.
@@ -109,6 +112,8 @@ DevSecOps stands for **Development, Security, and Operations**. It is a software
 ---
 
 ## Key DevSecOps terms and concepts
+
+![Alt text](/Lectures/images/s2.png)
 
 **Before we dive into tools,** map the **key DevSecOps check types** you will use in pipelines: **SAST** for code security, **DAST** for runtime security, **SCA** for dependency risk, and **Code Quality checks** for maintainability. Know **what each does** and **where it runs** so you can place them in the right stages and interpret results correctly.
 
@@ -181,6 +186,8 @@ One-line takeaway:
 When integrated into a **CI/CD pipeline**, SonarQube becomes a **quality and security gate**—a checkpoint every build must pass before packaging, deployment, or release. It shifts defect detection left by embedding SAST and maintainability checks directly into developers’ daily workflow and enforces measurable standards through **quality gates and policies**. For DevOps and platform teams, it provides **central visibility** into the health of codebases, ensuring consistency, compliance, and traceability across projects.
 
 SonarQube’s capabilities span three major pillars that together deliver full-spectrum assurance for both developers and DevSecOps teams:
+
+![Alt text](/Lectures/images/s3.png)
 
 **1. Code coverage**
 
@@ -260,6 +267,8 @@ By combining these issue types, SonarQube gives you a complete view of **reliabi
 
 This workflow shows how a modern Java application moves from source code to production using DevSecOps practices. The flow is **CI/CD tool agnostic** — the same stages work whether you use **Jenkins, GitHub Actions, GitLab CI, or Bitbucket Pipelines**.
 Each phase embeds security, quality, and compliance checks to ensure production-ready software.
+
+![Alt text](/Lectures/images/s4.png)
 
 
 #### 1. Checkout private Git repo
@@ -720,6 +729,8 @@ To make analysis meaningful, SonarQube uses three key concepts: **quality profil
 
 > **Quick note:** in the labs you installed the **SonarQube Server** on the VM; the **Scanner** is a separate client component that runs inside your CI jobs or on build agents.
 
+![Alt text](/Lectures/images/s5.png)
+
 ### 1) SonarQube Server
 
 * The **SonarQube Server** is the central service that receives and stores analysis results, provides the web UI and runs the compute engine that evaluates rules, metrics and quality gates.
@@ -967,6 +978,8 @@ Alternatively, Jenkins agents can connect to a **remote Docker daemon** or use *
 ### **Demo Introduction: What We’re Going to Build**
 
 In this demo we’ll take a **private GitHub repository**, create a **fresh Maven project**, intentionally inject **bad code**, and then use **Jenkins + SonarQube** to scan, detect issues, enforce a **Quality Gate**, and even build and run a **Docker image** of the application.
+
+![Alt text](/Lectures/images/s6.png)
 
 This is a complete, end to end, real world flow:
 
